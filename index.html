@@ -6,8 +6,7 @@
 
     <title>Board</title>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script> 
     $(document).ready(function(){
       $("#catLeft").click(function(){
@@ -24,7 +23,6 @@
       });
     });
     </script> 
-    
 </head>
 
 <body>
@@ -34,9 +32,10 @@
     </div>
 
     <div class="board">
+
     </div>
     
-    <img src="./assets/Cat.png" id="cat" class="character" height=100px width=100px>
+    <img src="./assets/Cat.png" id="cat" style="position:absolute"  class="character" height=100px width=100px>
     <img src="./assets/Dog.png" id="dog" class="character" height=100px width=100px>
 
     <div class="controls">
@@ -58,7 +57,4 @@
     
     <script src="Movement.js"></script>
 
-    
-
 </body>
-
