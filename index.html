@@ -7,22 +7,9 @@
     <title>Board</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script> 
-    $(document).ready(function(){
-      $("#catLeft").click(function(){
-        $("#cat").animate({left: '-=105px'});
-      });
-      $("#catRight").click(function(){
-        $("#cat").animate({left: '+=105px'});
-      });
-      $("#catUp").click(function(){
-        $("#cat").animate({top: '-=105px'});
-      });
-      $("#catDown").click(function(){
-        $("#cat").animate({top: '+=105px'});
-      });
-    });
-    </script> 
+    <script src="Movement.js"></script>
+    <script src="Buttons.js"></script> 
+
 </head>
 
 <body>
@@ -35,8 +22,8 @@
 
     </div>
     
-    <img src="./assets/Cat.png" id="cat" style="position:absolute"  class="character" height=100px width=100px>
-    <img src="./assets/Dog.png" id="dog" class="character" height=100px width=100px>
+    <img src="./assets/Cat.png" id="cat" style="position:relative" class="character" height=100px width=100px>
+    <img src="./assets/Dog.png" id="dog" style="position:relative" class="character" height=100px width=100px>
 
     <div class="controls">
         <div class="charOneControls">
@@ -55,6 +42,5 @@
     </div>
 
     
-    <script src="Movement.js"></script>
 
 </body>
