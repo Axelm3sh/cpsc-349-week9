@@ -5,6 +5,26 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Board</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script> 
+    $(document).ready(function(){
+      $("#catLeft").click(function(){
+        $("#cat").animate({left: '-=105px'});
+      });
+      $("#catRight").click(function(){
+        $("#cat").animate({left: '+=105px'});
+      });
+      $("#catUp").click(function(){
+        $("#cat").animate({top: '-=105px'});
+      });
+      $("#catDown").click(function(){
+        $("#cat").animate({top: '+=105px'});
+      });
+    });
+    </script> 
+    
 </head>
 
 <body>
@@ -35,8 +55,10 @@
         </div>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    
     <script src="Movement.js"></script>
 
+    
+
 </body>
+
