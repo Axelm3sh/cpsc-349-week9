@@ -46,6 +46,9 @@ function initializeGridSize() {
 
     array_GridTiles[1].appendChild(charOneSpr);
     array_GridTiles[2].appendChild(charTwoSpr);
+    
+    
+    
 
 }
 
@@ -109,22 +112,26 @@ function Move(dirOverride) {
 
     if (isCat) {
         //find parent data-'type'
-        currRow = charOneSpr.parentNode.dataset.rowid; //using data-type attri
+//        currRow = charOneSpr.parentNode.dataset.rowid; //using data-type attri
         //        currRow = charOneSpr.style.grid-column;
-        currCol = charOneSpr.parentNode.dataset.colid;
+//        currCol = charOneSpr.parentNode.dataset.colid;
 
         switch (direction) {
             case "w":
-                swapImage("cat", Number(currRow) - 1, Number(currCol));
+                $("#cat").animate({top: '-=105px'});
+//                swapImage("cat", Number(currRow) - 1, Number(currCol));
                 break;
             case "a":
-                swapImage("cat", Number(currRow), Number(currCol) - 1);
+                $("#cat").animate({left: '-=105px'});
+//                swapImage("cat", Number(currRow), Number(currCol) - 1);
                 break;
             case "s":
-                swapImage("cat", Number(currRow) + 1, Number(currCol));
+                $("#cat").animate({top: '+=105px'});
+//                swapImage("cat", Number(currRow) + 1, Number(currCol));
                 break;
             case "d":
-                swapImage("cat", Number(currRow), Number(currCol) + 1);
+                $("#cat").animate({left: '+=105px'});
+//                swapImage("cat", Number(currRow), Number(currCol) + 1);
                 break;
             default:
                 console.log("Invalid move button");
@@ -135,22 +142,26 @@ function Move(dirOverride) {
     } else //player 2 AKA dog
     {
         //find parent data-'type'
-        currRow = charTwoSpr.parentNode.dataset.rowid; //using data-type attri
+//        currRow = charTwoSpr.parentNode.dataset.rowid; //using data-type attri
         //        currRow = charOneSpr.style.grid-column;
-        currCol = charTwoSpr.parentNode.dataset.colid;
+//        currCol = charTwoSpr.parentNode.dataset.colid;
 
         switch (direction) {
             case "i":
-                swapImage("dog", Number(currRow) - 1, Number(currCol));
+                $("#dog").animate({top: '-=105px'});
+//                swapImage("dog", Number(currRow) - 1, Number(currCol));
                 break;
             case "j":
-                swapImage("dog", Number(currRow), Number(currCol) - 1);
+                $("#dog").animate({left: '-=105px'});
+//                swapImage("dog", Number(currRow), Number(currCol) - 1);
                 break;
             case "k":
-                swapImage("dog", Number(currRow) + 1, Number(currCol));
+                $("#dog").animate({top: '+=105px'});
+//                swapImage("dog", Number(currRow) + 1, Number(currCol));
                 break;
             case "l":
-                swapImage("dog", Number(currRow), Number(currCol) + 1);
+                $("#dog").animate({left: '+=105px'});
+//                swapImage("dog", Number(currRow), Number(currCol) + 1);
                 break;
             default:
                 console.log("Invalid move button");
