@@ -27,10 +27,16 @@ window.onkeyup = function () {
     Move();
 }
 
+function buttonMove(direction)
+{
+    event.key = direction;
+}
 
 //Parameter is the square grid size
 function initializeGridSize() {
     //    var boardElement = document.querySelector(".board");
+    $(".board").load("GridTemplate.html");
+    
 
     array_GridTiles = document.querySelectorAll("#tile");
     //go thru all found GridTiles, rename their ID to match the grid size
@@ -76,7 +82,7 @@ function swapImage(char, newRow, newCol) {
 }
 
 //bool, direction="up","left","down","right"
-function Move() {
+function Move(dirOverride) {
     var currRow;
     var currCol;
 
