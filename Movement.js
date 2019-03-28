@@ -116,9 +116,13 @@ function Move(dirOverride) {
         //        currRow = charOneSpr.style.grid-column;
 //        currCol = charOneSpr.parentNode.dataset.colid;
 
+        var posCat = $("#cat").position();
+        
         switch (direction) {
             case "w":
+                if((posCat.top - 105) > 80){
                 $("#cat").animate({top: '-=105px'});
+                }
 //                swapImage("cat", Number(currRow) - 1, Number(currCol));
                 break;
             case "a":
@@ -146,9 +150,13 @@ function Move(dirOverride) {
         //        currRow = charOneSpr.style.grid-column;
 //        currCol = charTwoSpr.parentNode.dataset.colid;
 
+        var posDog = $("#dog").position();
+        
         switch (direction) {
             case "i":
+                if((posDog.top - 105) > 80){
                 $("#dog").animate({top: '-=105px'});
+                }
 //                swapImage("dog", Number(currRow) - 1, Number(currCol));
                 break;
             case "j":
