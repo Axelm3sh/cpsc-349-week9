@@ -18,6 +18,9 @@ var tileData = {
 window.onload = function () {
     alert("Hello, welcome to the grid board!");
 
+
+
+
     initializeGridSize();
 
 };
@@ -27,8 +30,7 @@ window.onkeyup = function () {
     Move();
 }
 
-function buttonMove(direction)
-{
+function buttonMove(direction) {
     event.key = direction;
 }
 
@@ -36,7 +38,7 @@ function buttonMove(direction)
 function initializeGridSize() {
     //    var boardElement = document.querySelector(".board");
     $(".board").load("GridTemplate.html");
-    
+
 
     array_GridTiles = document.querySelectorAll("#tile");
     //go thru all found GridTiles, rename their ID to match the grid size
@@ -136,7 +138,7 @@ function Move(dirOverride) {
         currRow = charTwoSpr.parentNode.dataset.rowid; //using data-type attri
         //        currRow = charOneSpr.style.grid-column;
         currCol = charTwoSpr.parentNode.dataset.colid;
-        
+
         switch (direction) {
             case "i":
                 swapImage("dog", Number(currRow) - 1, Number(currCol));
