@@ -1,16 +1,8 @@
-.instructions {
-    background-color: aqua;
-}
-
 .board {
     display: grid;
     grid-template-columns: repeat(8, 100px);
     grid-template-rows: repeat(8, 100px);
     grid-gap: 5px;
-}
-
-.controls {
-    background-color: aqua;
 }
 
 #tile {
@@ -19,3 +11,40 @@
     background-size: cover;
 }
 
+.controls {
+    display: grid;
+    grid-template-columns: 400px 400px;
+}
+
+.charOneControls, .charTwoControls {
+    justify-content: center;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 50px);
+    grid-gap: 5px;
+}
+
+.charTwoControls {
+    grid-column: 2;
+}
+
+.controls .up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.controls .down {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.controls .left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.controls .right {
+    grid-column: 3;
+    grid-row: 2;
+}
